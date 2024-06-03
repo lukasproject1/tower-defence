@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2617563986413013466}
   - component: {fileID: 3476373110258116170}
   - component: {fileID: 7525417950499892495}
+  - component: {fileID: -608721259902483990}
   m_Layer: 0
   m_Name: monsterTest
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1572625552347393374}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18, y: 5.43, z: -57.99}
+  m_LocalPosition: {x: 0, y: 5.43, z: -57.99}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -107,3 +108,23 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-608721259902483990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572625552347393374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cfdfb2c3885087489c667644aaeba3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPO:
+  - {x: -0.2, y: 5.2, z: -53}
+  - {x: -0.2, y: 5.2, z: 0}
+  - {x: 28.1, y: 5.2, z: 0}
+  - {x: 28.1, y: 5.2, z: 30}
+  - {x: 1.4, y: 5.2, z: 30}
+  - {x: 1.4, y: 5.2, z: 59}
+  speed: 6
