@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPO:
-  - {x: -0.2, y: 5.2, z: -53}
+  - {x: 1.09, y: 5.2, z: -66}
   - {x: -0.2, y: 5.2, z: 0}
   - {x: 28.1, y: 5.2, z: 0}
   - {x: 28.1, y: 5.2, z: 30}
