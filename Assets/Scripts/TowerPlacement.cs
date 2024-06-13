@@ -8,11 +8,14 @@ public class TowerPlacement : MonoBehaviour
     public LayerMask ignoreLayer; // LayerMask om lagen te negeren boven het veld
     public GameObject towerPrefab; // Prefab van de toren die geplaatst moet worden
     public Camera mainCamera; // De camera waarmee de raycast wordt gemaakt
+    public float placementRadius = 1.0f; // Radius om te controleren op bestaande torens
+
+    private List<Vector3> placedTowerPositions = new List<Vector3>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -30,9 +33,19 @@ public class TowerPlacement : MonoBehaviour
             {
                 if (IsLayerInLayerMask(hit.collider.gameObject.layer, fieldLayer))
                 {
-                    // Plaats de toren op de positie van de raycast hit
-                    Instantiate(towerPrefab, hit.point, Quaternion.identity);
-                    Debug.Log("Toren geplaatst op: " + hit.point);
+                    Vector3 hitPoint = hit.point;
+
+                    if (CanPlaceTower(hitPoint))
+                    {
+                        // Plaats de toren op de positie van de raycast hit
+                        Instantiate(towerPrefab, hitPoint, Quaternion.identity);
+                        placedTowerPositions.Add(hitPoint);
+                        Debug.Log("Toren geplaatst op: " + hitPoint);
+                    }
+                    else
+                    {
+                        Debug.Log("Kan geen toren plaatsen op dezelfde plaats.");
+                    }
                     return; // Stop de loop na het plaatsen van de toren
                 }
                 else
@@ -42,6 +55,18 @@ public class TowerPlacement : MonoBehaviour
             }
             Debug.Log("Geen geschikt veld gevonden om een toren te plaatsen.");
         }
+    }
+
+    bool CanPlaceTower(Vector3 position)
+    {
+        foreach (var placedPosition in placedTowerPositions)
+        {
+            if (Vector3.Distance(placedPosition, position) < placementRadius)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     bool IsLayerInLayerMask(int layer, LayerMask layerMask)
