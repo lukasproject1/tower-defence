@@ -5,6 +5,8 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     public float speed;    // Start is called before the first frame update
+    public float monsterHealth;
+    public float maxHealth;
     void Start()
     {
         

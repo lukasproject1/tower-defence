@@ -8,6 +8,8 @@ public class LightEnemy :Monster
     void Start()
     {
         speed = 6;
+        monsterHealth = 2;
+        maxHealth = 2;
     }
 
     // Update is called once per frame

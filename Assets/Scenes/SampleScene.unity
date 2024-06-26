@@ -3514,13 +3514,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyToSpawn: {fileID: 1572625552347393374, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
-    amountToSpawn: 1
+  - enemyTypes:
+    - enemyToSpawn: {fileID: 1572625552347393374, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+      amountToSpawn: 1
+    - enemyToSpawn: {fileID: 515815342678625327, guid: 2b24bb7429050904db9acc9a4d0c1697, type: 3}
+      amountToSpawn: 2
     spawnLocation: {x: 0, y: 5.2, z: -53}
-  - enemyToSpawn: {fileID: 1572625552347393374, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
-    amountToSpawn: 2
+  - enemyTypes: []
     spawnLocation: {x: 1, y: 1, z: 1}
-  timeBetweenSpawns: 1
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  - enemyTypes: []
+    spawnLocation: {x: 1, y: 1, z: 1}
+  timeBetweenSpawns: 3
 --- !u!4 &632287095
 Transform:
   m_ObjectHideFlags: 0
@@ -3556,6 +3594,7 @@ MonoBehaviour:
     m_Bits: 0
   towerPrefab: {fileID: 4317664226831271202, guid: 653bc487475bc7247abf1cf966b2b438, type: 3}
   mainCamera: {fileID: 963194227}
+  placementRadius: 3
 --- !u!1001 &649323117
 PrefabInstance:
   m_ObjectHideFlags: 0
