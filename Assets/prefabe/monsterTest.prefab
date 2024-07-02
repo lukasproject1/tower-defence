@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7525417950499892495}
   - component: {fileID: -608721259902483990}
   - component: {fileID: 2743952224238780629}
+  - component: {fileID: -4191221160278865318}
   m_Layer: 11
   m_Name: monsterTest
   m_TagString: Untagged
@@ -128,6 +129,7 @@ MonoBehaviour:
   - {x: 28.1, y: 5.2, z: 30}
   - {x: 1.4, y: 5.2, z: 30}
   - {x: 1.4, y: 5.2, z: 59}
+  targetRadius: 0.3
 --- !u!114 &2743952224238780629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,3 +143,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  monsterHealth: 2
+  maxHealth: 2
+--- !u!54 &-4191221160278865318
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572625552347393374}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

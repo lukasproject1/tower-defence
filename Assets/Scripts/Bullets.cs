@@ -9,10 +9,16 @@ public class Bullets : MonoBehaviour
         if(collision.gameObject.TryGetComponent<HeavyEnemy>(out HeavyEnemy heavyEnemyComponent))
         {
             heavyEnemyComponent.TakeDamage(1);
-            Debug.Log("did hit monster");
+            Debug.Log("did hit heavy monster");
         }
 
+        if (collision.gameObject.TryGetComponent<LightEnemy>(out LightEnemy LightEnemyComponent))
+        {
+            LightEnemyComponent.TakeDamage(1);
+            Debug.Log("did hit light monster");
+        }
 
         Destroy(gameObject);
     }
+    
 }

@@ -7,6 +7,8 @@ public class Pathfinding : MonoBehaviour
     public Vector3[] targetPO;
     private int currentPoint = 0; // Index of the current waypoint
     private Monster monster; // Reference to the Monster component
+    public float targetRadius = 2.1f; // Radius within which the target is considered reached
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,7 @@ public class Pathfinding : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, step); // Move towards the next waypoint
 
         // Check if the object has reached the target position
-        if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
+        if (Vector3.Distance(transform.position, targetPosition) < targetRadius)
         {
             currentPoint++; // Move to the next waypoint
         }

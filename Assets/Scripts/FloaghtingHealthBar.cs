@@ -9,7 +9,13 @@ public class FloaghtingHealthBar : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Camera camera;
     [SerializeField] private Transform target;
+    private GameObject player;
 
+    private void Start()
+    {
+        camera = Camera.main;
+        player = GameObject.Find("Player");
+    }
     public void UpdateHealthBar(float currentValue, float maxValue)
     {
         slider.value = currentValue/maxValue;
@@ -19,6 +25,14 @@ public class FloaghtingHealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = camera.transform.rotation;
+        if (!camera)
+        {
+            camera = Camera.main;
+        }
+        else
+        {
+            transform.rotation = camera.transform.rotation;
+
+        }
     }
 }

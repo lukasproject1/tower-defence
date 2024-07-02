@@ -49,6 +49,15 @@ public class HpCave : MonoBehaviour
                     Debug.Log("Hit light enemy, health reduced to: " + health);
                 }
 
+                if(hit.collider.gameObject.layer == layerHeavyEnemy)
+                {
+                    health -= 5;
+                    healthText.text = "Health: " + health; // Update the health text
+                    Debug.Log("Hit light enemy, health reduced to: " + health);
+
+
+                }
+
 
                 // Destroy the gameobject that was hit by the raycast
                 Destroy(hit.collider.gameObject);

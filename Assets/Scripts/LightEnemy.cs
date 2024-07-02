@@ -11,10 +11,28 @@ public class LightEnemy :Monster
         monsterHealth = 2;
         maxHealth = 2;
     }
+    [SerializeField] FloaghtingHealthBar healthBar;
+    private void Awake()
+    {
+        monsterHealth = maxHealth;
+        healthBar.UpdateHealthBar(monsterHealth, maxHealth);
+        healthBar = GetComponentInChildren<FloaghtingHealthBar>();
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        monsterHealth -= damageAmount;
+        healthBar.UpdateHealthBar(monsterHealth, maxHealth);
+        if (monsterHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
+
         
     }
 }
