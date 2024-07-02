@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: light enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1572625552347393374, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 2743952224238780629, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
       propertyPath: healthBar
       value: 

@@ -754,7 +754,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3469,7 +3469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - enemyTypes:
-    - enemyToSpawn: {fileID: 1572625552347393374, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+    - enemyToSpawn: {fileID: 5698087320588199192, guid: 325e22faada72e14b839eff91472e997, type: 3}
       amountToSpawn: 1
     - enemyToSpawn: {fileID: 3823306104141607013, guid: 90c1b1a231e1e1f4a9cc7213e05bd9c3, type: 3}
       amountToSpawn: 2
@@ -3546,7 +3546,7 @@ MonoBehaviour:
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 0
-  towerPrefab: {fileID: 4317664226831271202, guid: 653bc487475bc7247abf1cf966b2b438, type: 3}
+  towerPrefab: {fileID: 8379571676461765950, guid: f34f10db14edcc44396044960c1421ca, type: 3}
   mainCamera: {fileID: 963194227}
   placementRadius: 3
 --- !u!1001 &649323117

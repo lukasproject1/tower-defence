@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a07db2010dd7a4d4d986f52a1998e55f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2971090980560697081}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a07db2010dd7a4d4d986f52a1998e55f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8890778309470569719}
   m_SourcePrefab: {fileID: 100100000, guid: a07db2010dd7a4d4d986f52a1998e55f, type: 3}
 --- !u!1 &4317664226831271202 stripped
 GameObject:
@@ -80,3 +83,20 @@ MonoBehaviour:
   prefabToInstantiate: {fileID: 3789409914915940464, guid: b73dfa09331dcb7469e8b321ff91b4fe, type: 3}
   target: {fileID: 3340460104208734449, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
   moveSpeed: 20
+--- !u!114 &-8890778309470569719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4317664226831271202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9420617a30014ad4ca14c5aa2630c866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 3789409914915940464, guid: b73dfa09331dcb7469e8b321ff91b4fe, type: 3}
+  range: 10
+  fireRate: 1
+  partToRotate: {fileID: 0}
+  turnSpeed: 10
