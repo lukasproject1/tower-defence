@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
+using  UnityEngine.SceneManagement;
 
 public class HpCave : MonoBehaviour
 {
@@ -57,7 +58,10 @@ public class HpCave : MonoBehaviour
 
 
                 }
-
+                if( health <= 0) 
+                {
+                    Die();
+                }
 
                 // Destroy the gameobject that was hit by the raycast
                 Destroy(hit.collider.gameObject);
@@ -66,6 +70,12 @@ public class HpCave : MonoBehaviour
             }
         }
     }
+    void Die()
+    {
+        // Laad de death scene
+        SceneManager.LoadScene("DeathScene");
+    }
+
 
 
     internal class HpClass
