@@ -3739,22 +3739,24 @@ MonoBehaviour:
   waves:
   - enemyTypes:
     - enemyToSpawn: {fileID: 5698087320588199192, guid: 325e22faada72e14b839eff91472e997, type: 3}
-      amountToSpawn: 6
+      amountToSpawn: 10
     spawnLocation: {x: 19.48, y: 12, z: -53}
     spawnRotation: {x: 0, y: 50, z: 0, w: 0}
   - enemyTypes:
-    - enemyToSpawn: {fileID: 5698087320588199192, guid: 325e22faada72e14b839eff91472e997, type: 3}
-      amountToSpawn: 10
+    - enemyToSpawn: {fileID: 7927539065757509729, guid: 1ad92838cf362474b85141e2c5cfc5f2, type: 3}
+      amountToSpawn: 3
     spawnLocation: {x: 0, y: 6, z: -53}
     spawnRotation: {x: 0, y: 60, z: 0, w: 0}
   - enemyTypes:
-    - enemyToSpawn: {fileID: 5698087320588199192, guid: 325e22faada72e14b839eff91472e997, type: 3}
-      amountToSpawn: 20
+    - enemyToSpawn: {fileID: 3823306104141607013, guid: 90c1b1a231e1e1f4a9cc7213e05bd9c3, type: 3}
+      amountToSpawn: 1
     spawnLocation: {x: 1, y: 1, z: 1}
     spawnRotation: {x: 0, y: 0, z: 0, w: 0}
-  - enemyTypes: []
+  - enemyTypes:
+    - enemyToSpawn: {fileID: 7927539065757509729, guid: 1ad92838cf362474b85141e2c5cfc5f2, type: 3}
+      amountToSpawn: 5
     spawnLocation: {x: 1, y: 1, z: 1}
-    spawnRotation: {x: 0, y: 0, z: 0, w: 0}
+    spawnRotation: {x: 0, y: 80, z: 0, w: 0}
   - enemyTypes: []
     spawnLocation: {x: 1, y: 1, z: 1}
     spawnRotation: {x: 0, y: 0, z: 0, w: 0}
