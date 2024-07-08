@@ -1,22 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class HeavyEnemy : Monster
+public class MediumEnemy : Monster
 {
-
-    public int moneyValue = 80;
+    public int moneyValue = 40;
     // Start is called before the first frame update
     void Start()
     {
-        speed = 2;
-        monsterHealth = 12;
-        maxHealth = 12; 
-
+        speed= 5;
+        monsterHealth = 5;
+        maxHealth = 5;
     }
-   
-
     [SerializeField] FloaghtingHealthBar healthBar;
     private void Awake()
     {
@@ -24,7 +19,6 @@ public class HeavyEnemy : Monster
         healthBar.UpdateHealthBar(monsterHealth, maxHealth);
         healthBar = GetComponentInChildren<FloaghtingHealthBar>();
     }
-
     public void TakeDamage(float damageAmount)
     {
         monsterHealth -= damageAmount;
@@ -34,8 +28,10 @@ public class HeavyEnemy : Monster
             Destroy(gameObject);
 
             MoneySystem.instance.AddMoney(moneyValue);
+            
         }
     }
+
     // Update is called once per frame
     void Update()
     {

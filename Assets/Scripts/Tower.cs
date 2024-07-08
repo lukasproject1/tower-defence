@@ -16,6 +16,7 @@ public class Tower : MonoBehaviour
     public float turnSpeed = 10f;
 
     private GameObject towerObject;
+    public bool isDoubleShootingTower = false;
     private void Start()
     {
 
@@ -87,9 +88,27 @@ public class Tower : MonoBehaviour
         turretToRotate.rotation = Quaternion.Euler(turretRotation.x, baseRotation.y, turretRotation.z);
     }
 
+
+
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+        if (isDoubleShootingTower)
+        {
+            // Instantiate two bullets with slight offset positions
+            Vector3 offset = new Vector3(0.5f, 3, 5); // Adjust the offset as needed
+            InstantiateBullet(transform.position + offset);
+            InstantiateBullet(transform.position - offset);
+        }
+        else
+        {
+            // Instantiate one bullet
+            InstantiateBullet(transform.position);
+        }
+    }
+
+    void InstantiateBullet(Vector3 position)
+    {
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, position, transform.rotation);
         Bullets bullet = bulletGO.GetComponent<Bullets>();
 
         if (bullet != null)
@@ -97,6 +116,18 @@ public class Tower : MonoBehaviour
             bullet.Seek(target);
         }
     }
+
+    /* void Shoot()
+     {
+         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, transform.position, transform.rotation);
+         Bullets bullet = bulletGO.GetComponent<Bullets>();
+
+         if (bullet != null)
+         {
+             bullet.Seek(target);
+         }
+     }
+    */
 
     void OnDrawGizmosSelected()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightEnemy :Monster
 {
+    public int moneyValue = 20;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class LightEnemy :Monster
         healthBar.UpdateHealthBar(monsterHealth, maxHealth);
         if (monsterHealth <= 0)
         {
+            MoneySystem.instance.AddMoney(moneyValue);
             Destroy(gameObject);
         }
     }

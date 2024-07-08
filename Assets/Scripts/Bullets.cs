@@ -28,6 +28,11 @@ public class Bullets : MonoBehaviour
             LightEnemyComponent.TakeDamage(1);
             Debug.Log("did hit light monster");
         }
+        if(collision.gameObject.TryGetComponent<MediumEnemy>(out MediumEnemy MediumEnemyComponent))
+        {
+            MediumEnemyComponent.TakeDamage(1);
+            Debug.Log("did hit medium monster");
+        }
 
         Destroy(gameObject);
     }

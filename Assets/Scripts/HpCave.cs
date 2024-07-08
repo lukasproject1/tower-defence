@@ -52,11 +52,18 @@ public class HpCave : MonoBehaviour
 
                 if(hit.collider.gameObject.layer == layerHeavyEnemy)
                 {
-                    health -= 5;
+                    health -= 10;
                     healthText.text = "Health: " + health; // Update the health text
                     Debug.Log("Hit light enemy, health reduced to: " + health);
 
 
+                }
+                if(hit.collider.gameObject.layer==layerMediumEnemy)
+                {
+
+                    health -= 5;
+                    healthText.text = "Health" + health;
+                    Debug.Log("hit medium enemy, health reduced to:" + health);
                 }
                 if( health <= 0) 
                 {

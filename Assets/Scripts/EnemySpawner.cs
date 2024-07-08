@@ -16,6 +16,7 @@ public struct Wave
     public EnemyType[] enemyTypes;
 
     public Vector3 spawnLocation;
+    public Quaternion spawnRotation;
 }
 
 public class EnemySpawner : MonoBehaviour
@@ -42,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 for (int i = 0; i < enemyType.amountToSpawn; i++)
                 {
-                    GameObject enemy = Instantiate(enemyType.enemyToSpawn, currentWave.spawnLocation, Quaternion.identity);
+                    GameObject enemy = Instantiate(enemyType.enemyToSpawn, currentWave.spawnLocation,currentWave.spawnRotation);
                     spawnedEnemies.Add(enemy);
                     yield return new WaitForSeconds(timeBetweenSpawns);
                 }

@@ -417,6 +417,14 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 5254089616743806828}
+    - target: {fileID: 2743952224238780629, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743952224238780629, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+      propertyPath: monsterHealth
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3340460104208734449, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.4963
@@ -457,6 +465,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3476373110258116170, guid: 2d4b3e4787d2c7d42b38fa9abd44aece, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5341a2d4a8464224cb6b95ab8b9ae85d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
