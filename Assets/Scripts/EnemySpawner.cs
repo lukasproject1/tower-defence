@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -19,8 +20,11 @@ public struct Wave
     public Quaternion spawnRotation;
 }
 
+
 public class EnemySpawner : MonoBehaviour
 {
+    public TextMeshProUGUI waveText;
+   
     public Wave[] waves;
     public float timeBetweenSpawns = 1.0f; // Time between spawns
 
